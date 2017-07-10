@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Chris Daw</title>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+  <!-- Font Family -->
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+  <!-- Style Sheet -->
+  <link href="static/style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+<!--Menu Bar -->
+<div class="navbar">
+  <ul class="menu">
+      <li><a href="{{ url_for('index') }}">Chris Daw</a></li>
+    <li><a href="{{ url_for('about') }}">About</a></li>
+    <li><a href="{{ url_for('cs') }}">Computer Science</a></li>
+    <li><a class="active" href="{{ url_for('theatre') }}">Theatre</a></li>
+    <li class="last"><a href="mailto:chris@chrisdaw.net">Contact Me</a></li>
+  </ul>
+</div>
+
+<!-- Page Header -->
+<div class="header">
+  <div class="container">
+    <div id="header-text">
+      <h1>Chris Daw</h1>
+      <h4>Western Washington University</h4>
+      <p>Programmer,<br>Theater Technician,<br>Hobbyist.</p>
+    </div>
+  </div>
+
+
+</body>
+</html>

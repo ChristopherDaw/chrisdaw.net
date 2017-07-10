@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Chris Daw</title>
+
+  <!-- ****** faviconit.com favicons ****** -->
+  <link rel="shortcut icon" href="static/images/favicon.ico">
+  <link rel="icon" sizes="16x16 32x32 64x64" href="static/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="196x196" href="static/images/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="160x160" href="static/images/favicon-160.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="static/images/favicon-96.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="static/images/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon-16.png">
+  <link rel="apple-touch-icon" href="static/images/favicon-57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="static/images/favicon-114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="static/images/favicon-72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="static/images/favicon-144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="static/images/favicon-60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="static/images/favicon-120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="static/images/favicon-76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="static/images/favicon-152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="static/images/favicon-180.png">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="msapplication-TileImage" content="static/images/favicon-144.png">
+  <meta name="msapplication-config" content="static/images/browserconfig.xml">
+
+  <!-- Font Family -->
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+  <!-- Style Sheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="static/style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+<!--Menu Bar -->
+<nav class="menu">
+  <ul>
+    <li><a class="active" href="#">Chris Daw</a></li>
+    <li class="dropdown">
+      <a href="about" class="dropbutton">About</a>
+      <div class="about-content">
+        <a href="about">Summary</a>
+        <a href="about#edu">Education</a>
+        <a href="about#work-exp">Work Experience</a>
+        <a href="about#hobbies">Hobbies</a>
+        <a href="about#awards">Accomplishments</a>
+      </div></li>
+    <li><a href="{{ url_for('cs') }}">Computer Science</a></li>
+    <li><a href="{{ url_for('theatre') }}">Theatre</a></li>
+    <li class="last"><a href="mailto:chris@chrisdaw.net">Contact Me</a></li>
+  </ul>
+</nav>
+
+<!-- Page Header -->
+<section class="header">
+  <div class="container">
+    <div class="row">
+      <div class="five columns">
+        <img src="static/images/portrait.jpg" alt="Picture of me.">
+      </div>
+      <div class="six columns">
+        <h1>Chris Daw</h1>
+        <h4>Western Washington University</h4>
+        <p>Programmer,<br>Theater Technician,<br>Hobbyist.</p>
+
+        <!-- Social Media Links -->
+        <a href="https://github.com/ChristopherDaw" title="GitHub" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/chrisdawww/" title="LinkedIn" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+        <a href="https://www.instagram.com/chrisdawww/" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.flickr.com/people/51503874@N05/" title="Flickr" target="_blank"><i class="fa fa-flickr"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

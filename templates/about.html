@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Chris Daw</title>
+
+  <!-- ****** faviconit.com favicons ****** -->
+  <link rel="shortcut icon" href="static/images/favicon.ico">
+  <link rel="icon" sizes="16x16 32x32 64x64" href="static/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="196x196" href="static/images/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="160x160" href="static/images/favicon-160.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="static/images/favicon-96.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="static/images/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon-16.png">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="msapplication-TileImage" content="static/images/favicon-144.png">
+  <meta name="msapplication-config" content="static/images/browserconfig.xml">
+
+  <!-- Font Family -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+  <!-- Style Sheet -->
+  <link href="static/style.css" type="text/css" rel="stylesheet">
+
+  <!-- JQuery and JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="static/sticky-kit.js"></script>
+</head>
+
+<body>
+
+<!--Menu Bar -->
+  <nav class="menu" id="menu">
+    <ul>
+      <li><a href="{{ url_for('index') }}">Chris Daw</a></li>
+      <li><a class="active" href="#">About</a></li>
+      <li><a href="{{ url_for('cs') }}">Computer Science</a></li>
+      <li><a href="{{ url_for('theatre') }}">Theatre</a></li>
+      <li class="last"><a href="mailto:chris@chrisdaw.net">Contact Me</a></li>
+    </ul>
+  </nav>
+
+  <div class="about-wrapper">
+    <!-- Sidebar -->
+    <nav class="aboutnav">
+        <ul class="aboutnav-content">
+          <li><a href="#summary">Summary <i class="fa fa-arrow-right"></i></a></li>
+          <li><a href="#edu">Education <i class="fa fa-arrow-right"></i></a></li>
+          <li><a href="#work-exp">Work Experience <i class="fa fa-arrow-right"></i></a></li>
+          <li><a href="#hobbies">Hobbies <i class="fa fa-arrow-right"></i></a></li>
+          <li><a href="#awards">Other <i class="fa fa-arrow-right"></i></a></li>
+          <li><a href="#menu">Top <i class="fa fa-arrow-up"></i></a></li>
+        </ul>
+    </nav>
+    <!-- Stick the sidebar to the screen  -->
+    <script>
+    $(".aboutnav-content").stick_in_parent({
+      parent: ".aboutnav",
+      bottoming: false,
+    });
+    </script>
+
+    <script>
+    /* Scroll smoothly to anchor */
+    $(".aboutnav-content li a").on('click',function(e) {
+      var url = e.target.href;
+      var hash = url.substring(url.indexOf("#")+1);
+      $('html, body').animate({
+        scrollTop: $('#'+hash).offset().top
+      }, 500);
+      return false;
+    });
+    </script>
+
+    <!-- Fun little script that may or may not continue to be used -->
+    <script>
+    $(window).scroll(function () {
+      $('.aboutnav-content').css({
+        'top' : ($(this).scrollTop()/15)+"px"
+      });
+    });
+    </script>
+
+    <!-- Page Contents -->
+
+    <div class="about" id="summary">
+      <div class="summary">
+        <div class="sum-contents">
+          <h1>Summary</h1>
+          <div class="row">
+            <div class="six columns">
+              <h3>Chris Daw</h3>
+              <h4>Student, WWU</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="edu" id="edu">
+        <div class="edu-contents">
+          <h1>Education</h1>
+          <div class="row">
+            <div class="one-third column">
+              <div class="edu-summary">
+                <h3><a href="http://www.wwu.edu" target="_blank">
+                  Western Washington University</a></h3>
+                <h4>Expected Graduation 2020,</h4>
+                <h4>Computer Science Major,</h4>
+                <h4>Honors Program,</h4>
+                <h4>Physics Minor,</h4>
+                <h4>Honor Roll.</h4>
+              </div>
+            </div>
+            <div class="one-third column">
+              <div class="edu-courses">
+                <h3>Coursework </h3>
+                <h5>Computer Science</h5>
+                <ul>
+                  <li>CSCI 145 - Linear Data Structures</li>
+                </ul>
+                <h5>Math</h5>
+                <ul>
+                  <li>MATH 125 - Calculus and Analytic Geometry II</li>
+                  <li>MATH 224 - Multivariable Calculus and Geometry I</li>
+                  <li>MATH 309 - Proof in Discrete Mathematics</li>
+                </ul>
+                <h5>Physics</h5>
+                <ul>
+                  <li>PHYS 163 - Physics with Calculus III</li>
+                  <li>PHYS 220 - Physics with Calculus IV</li>
+                  <li>PHYS 350 - Engineering Thermodynamics</li>
+                </ul>
+                <h5>Other</h5>
+                <ul>
+                  <li>THTR 313 - Beginning Lighting Design</li>
+                  <li>HNRS 101, 103-105 - Honors Freshman Sequence</li>
+                </ul>
+                <a href="https://catalog.wwu.edu/search_advanced.php">
+                  <p>Catalog for reference</p></a>
+              </div>
+            </div>
+            <div class="one-third column">
+              <div class="edu-extra">
+                <h3>Extracurricular</h3>
+                <h5>Music</h5>
+                <ul>
+                  <li>Rebel Clef A Cappella</li>
+                  <li>University Men's Choir</li>
+                </ul>
+                <h5>Theatre</h5>
+                <ul>
+                  <li>Lighting Designer for two shows at Western.
+                    More info on <a href="theatre">the Theatre page.</a></li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="work-exp" id="work-exp">
+        <div class="work-contents">
+          <h1>Work Experience</h1>
+        </div>
+      </div>
+      <div class="hobbies" id="hobbies">
+        <div class="hobby-contents">
+          <h1>Hobbies</h1>
+        </div>
+      </div>
+      <div class="awards" id="awards">
+        <h1>Honorable Mentions</h1>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
