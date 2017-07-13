@@ -17,6 +17,9 @@
   <meta name="msapplication-TileImage" content="static/images/favicon-144.png">
   <meta name="msapplication-config" content="static/images/browserconfig.xml">
 
+  <!-- Fix media query issue with Chrome -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
   <!-- Font Family -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
@@ -34,11 +37,14 @@
 <!--Menu Bar -->
   <nav class="menu" id="menu">
     <ul>
-      <li><a href="{{ url_for('index') }}">Chris Daw</a></li>
+      <li class="desktop"><a href="{{ url_for('index') }}">Chris Daw</a></li>
+      <li class="mobile"><a href="{{ url_for('index') }}">Chris</a></li>
       <li><a class="active" href="#">About</a></li>
-      <li><a href="{{ url_for('cs') }}">Computer Science</a></li>
+      <li class="desktop"><a href="{{ url_for('cs') }}">Computer Science</a></li>
+      <li class="mobile"><a href="{{ url_for('cs') }}">CS</a></li>
       <li><a href="{{ url_for('theatre') }}">Theatre</a></li>
-      <li class="last"><a href="mailto:chris@chrisdaw.net">Contact Me</a></li>
+      <li class="last desktop"><a href="mailto:chris@chrisdaw.net">Contact Me</a></li>
+      <li class="last mobile"><a href="mailto:chris@chrisdaw.net"><i class="fa fa-envelope"></i></a></li>
     </ul>
   </nav>
 
@@ -48,9 +54,8 @@
         <ul class="aboutnav-content">
           <li><a href="#summary">Summary <i class="fa fa-arrow-right"></i></a></li>
           <li><a href="#edu">Education <i class="fa fa-arrow-right"></i></a></li>
-          <li><a href="#work-exp">Work Experience <i class="fa fa-arrow-right"></i></a></li>
+          <li><a href="#work-exp">Experience <i class="fa fa-arrow-right"></i></a></li>
           <li><a href="#hobbies">Hobbies <i class="fa fa-arrow-right"></i></a></li>
-          <li><a href="#awards">Other <i class="fa fa-arrow-right"></i></a></li>
           <li><a href="#menu">Top <i class="fa fa-arrow-up"></i></a></li>
         </ul>
     </nav>
@@ -63,7 +68,7 @@
     </script>
 
     <script>
-    /* Scroll smoothly to anchor */
+    /* Scroll smoothly to anchor credit: Joseph Silber on Stack Overflow question 7717527 */
     $(".aboutnav-content li a").on('click',function(e) {
       var url = e.target.href;
       var hash = url.substring(url.indexOf("#")+1);
@@ -74,7 +79,7 @@
     });
     </script>
 
-    <!-- Fun little script that may or may not continue to be used -->
+    <!-- Fun little script that may or may not continue to be used
     <script>
     $(window).scroll(function () {
       $('.aboutnav-content').css({
@@ -82,29 +87,42 @@
       });
     });
     </script>
+  -->
 
     <!-- Page Contents -->
 
     <div class="about" id="summary">
+
       <div class="summary">
         <div class="sum-contents">
           <h1>Summary</h1>
           <div class="row">
-            <div class="six columns">
-              <h3>Chris Daw</h3>
+            <div>
+              <h2>Chris Daw</h2>
               <h4>Student, WWU</h4>
+            </div>
+            <div class="ten columns">
+              <h4>I am originally from Palo Alto in the San Francisco Bay Area, California.
+                I am currently a computer science and physics student at Western Washington University.
+                I love technology and creating projects with it.
+                The only limitation to what technology can do is our imaginations.
+              </h4>
+              <p>If you would like a less colorful representation of this page, you can download my resume.</p>
+              <div class="test">
+                <a href="static/files/2017ChrisDawResume.pdf" target="_blank" class="downloadbutton">Resume!</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
       <div class="edu" id="edu">
         <div class="edu-contents">
           <h1>Education</h1>
           <div class="row">
             <div class="one-third column">
               <div class="edu-summary">
-                <h3><a href="http://www.wwu.edu" target="_blank">
-                  Western Washington University</a></h3>
+                <h3>Western Washington University</h3>
                 <h4>Expected Graduation 2020,</h4>
                 <h4>Computer Science Major,</h4>
                 <h4>Honors Program,</h4>
@@ -115,6 +133,8 @@
             <div class="one-third column">
               <div class="edu-courses">
                 <h3>Coursework </h3>
+                <a href="https://catalog.wwu.edu/search_advanced.php" target="_blank">
+                  <p>Catalog for reference</p></a>
                 <h5>Computer Science</h5>
                 <ul>
                   <li>CSCI 145 - Linear Data Structures</li>
@@ -136,8 +156,6 @@
                   <li>THTR 313 - Beginning Lighting Design</li>
                   <li>HNRS 101, 103-105 - Honors Freshman Sequence</li>
                 </ul>
-                <a href="https://catalog.wwu.edu/search_advanced.php">
-                  <p>Catalog for reference</p></a>
               </div>
             </div>
             <div class="one-third column">
@@ -157,18 +175,90 @@
           </div>
         </div>
       </div>
+
       <div class="work-exp" id="work-exp">
         <div class="work-contents">
           <h1>Work Experience</h1>
+          <div class="row">
+            <div class="one-third column">
+              <div class="work-cs">
+                <h3>WWU Computer Science</h3>
+                <h3>CS Support Group</h3>
+                <h5>Bellingham, WA</h5>
+                <h5>May 2017 - Present</h5>
+                <p>Experience in a DevOps environment for Western Washington University’s Computer Science Department.</p>
+                <p>Develop and maintain utility software in a variety of languages used by the CS Support team.</p>
+                <p>Broaden familiarity with networking, project collaboration, and general computer knowledge.</p>
+              </div>
+            </div>
+            <div class="one-third column">
+              <div class="work-theatre">
+                <h3>Palo Alto Children's Theatre</h3>
+                <h3>Production Intern</h3>
+                <h5>Palo Alto, CA</h5>
+                <h5>June - August 2016</h5>
+                <p>Designed lighting and taught kids how to use the equipment for multiple shows.</p>
+                <p>Developed communication skills through coordination between departments.</p>
+              </div>
+            </div>
+            <div class="one-third column">
+              <div class="work-stanford">
+                <h3>Stanford Electrical Engineering</h3>
+                <h3>Summer Intern</h3>
+                <h5>Stanford, CA</h5>
+                <h5>June - August 2015</h5>
+                <p>Developed a user interface in Java and C for a genomic data compression algorithm.</p>
+                <p>Worked independently to aid Mikel Hernaez, a post-doctoral researcher.</p>
+                <p>Learned how to implement C programs in a Java context including interfacing through a network.</p>
+
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
       <div class="hobbies" id="hobbies">
         <div class="hobby-contents">
           <h1>Hobbies</h1>
+          <div class="row">
+            <div class="five columns">
+              <div class="photography">
+
+                <div>
+                <h3>Photography and Birding</h3>
+                <a href="https://www.instagram.com/chrisdawww/" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.flickr.com/people/51503874@N05/" title="Flickr" target="_blank"><i class="fa fa-flickr"></i></a>
+                </div>
+                <!-- SnapWidget -->
+                <script src="https://snapwidget.com/js/snapwidget.js"></script>
+                <iframe src="https://snapwidget.com/embed/407928" class="snapwidget-widget" ></iframe>
+              </div>
+            </div>
+            <div class="six columns birding">
+              <p>In 2014 I got a DSLR camera and immediately started taking pictures.
+                A little later, my girlfriend got me started with bird watching (lovingly referred to as birding).
+                These two hobbies mix very well together as is shown by many of the pictures in this slideshow.
+                The quick, mobile nature of the subjects make it challinging yet very rewarding.
+                <br>
+                If you are have an ebird account and are interested in my checklists,
+                <a class="ebird" href="https://ebird.org/ebird/profile/NjAwODk5/">
+                  here is a link to my ebird profile.</a>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="four columns">
+              <div class="tinkering">
+                <h3>Tinkering</h3>
+                <img src="https://farm5.staticflickr.com/4242/35045893194_eba0fe4a80.jpg">
+              </div>
+            </div>
+            <div class="five columns">
+              <p>I have always enjoyed making neat, tangible things.
+                Pictured here are an LED sign I made the summer before my freshman year at WWU and a question mark block from Mario that I made for a show at the Palo Alto Children's Theater.
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="awards" id="awards">
-        <h1>Honorable Mentions</h1>
       </div>
     </div>
   </div>

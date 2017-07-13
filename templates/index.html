@@ -13,18 +13,12 @@
   <link rel="icon" type="image/png" sizes="64x64" href="static/images/favicon-64.png">
   <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon-16.png">
-  <link rel="apple-touch-icon" href="static/images/favicon-57.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="static/images/favicon-114.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="static/images/favicon-72.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="static/images/favicon-144.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="static/images/favicon-60.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="static/images/favicon-120.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="static/images/favicon-76.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="static/images/favicon-152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="static/images/favicon-180.png">
   <meta name="msapplication-TileColor" content="#FFFFFF">
   <meta name="msapplication-TileImage" content="static/images/favicon-144.png">
   <meta name="msapplication-config" content="static/images/browserconfig.xml">
+
+  <!-- Fix media query issue with Chrome -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <!-- Font Family -->
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
@@ -45,13 +39,14 @@
       <div class="about-content">
         <a href="about">Summary</a>
         <a href="about#edu">Education</a>
-        <a href="about#work-exp">Work Experience</a>
+        <a href="about#work-exp">Experience</a>
         <a href="about#hobbies">Hobbies</a>
-        <a href="about#awards">Accomplishments</a>
       </div></li>
-    <li><a href="{{ url_for('cs') }}">Computer Science</a></li>
+    <li class="desktop"><a href="{{ url_for('cs') }}">Computer Science</a></li>
+    <li class="mobile"><a href="{{ url_for('cs') }}">CS</a></li>
     <li><a href="{{ url_for('theatre') }}">Theatre</a></li>
-    <li class="last"><a href="mailto:chris@chrisdaw.net">Contact Me</a></li>
+    <li class="last desktop"><a href="mailto:chris@chrisdaw.net">Contact Me</a></li>
+    <li class="last mobile"><a href="mailto:chris@chrisdaw.net"><i class="fa fa-envelope"></i></a></li>
   </ul>
 </nav>
 
@@ -60,7 +55,7 @@
   <div class="container">
     <div class="row">
       <div class="five columns">
-        <img src="static/images/portrait.jpg" alt="Picture of me.">
+        <img src="https://farm5.staticflickr.com/4282/35044621484_1fc2b80c12.jpg" alt="Picture of me.">
       </div>
       <div class="six columns">
         <h1>Chris Daw</h1>
@@ -76,6 +71,6 @@
     </div>
   </div>
 </section>
-
+<h1>Website under construction!</h1>
 </body>
 </html>
