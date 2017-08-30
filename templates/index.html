@@ -31,46 +31,49 @@
 <body>
 
 <!--Menu Bar -->
-<nav class="menu">
-  <ul>
-    <li><a class="active" href="#">Chris Daw</a></li>
-    <li class="dropdown">
-      <a href="about" class="dropbutton">About</a>
-      <div class="about-content">
-        <a href="about">Summary</a>
-        <a href="about#edu">Education</a>
-        <a href="about#work-exp">Experience</a>
-        <a href="about#hobbies">Hobbies</a>
-      </div></li>
-    <li class="desktop"><a href="{{ url_for('cs') }}">Computer Science</a></li>
-    <li class="mobile"><a href="{{ url_for('cs') }}">CS</a></li>
-    <li><a href="{{ url_for('theatre') }}">Theatre</a></li>
-    <li class="last desktop"><a href="mailto:chris@chrisdaw.net">Contact Me</a></li>
-    <li class="last mobile"><a href="mailto:chris@chrisdaw.net"><i class="fa fa-envelope"></i></a></li>
-  </ul>
-</nav>
+<div class="wrapper">
+  <nav class="menu">
+    <ul>
+      <li><a class="active" href="#">Chris Daw</a></li>
+      <li class="dropdown">
+        <a href="about" class="dropbutton">About</a>
+        <div class="about-content">
+          <a href="about">Summary</a>
+          <a href="about#edu">Education</a>
+          <a href="about#work-exp">Experience</a>
+          <a href="about#hobbies">Hobbies</a>
+        </div></li>
+      <li class="desktop"><a href="{{ url_for('cs') }}">Computer Science</a></li>
+      <li class="mobile"><a href="{{ url_for('cs') }}">CS</a></li>
+      <li><a href="{{ url_for('theatre') }}">Theatre</a></li>
+      <li class="last desktop"><a href="mailto:chris@chrisdaw.net">Contact Me</a></li>
+      <li class="last mobile"><a href="mailto:chris@chrisdaw.net"><i class="fa fa-envelope"></i></a></li>
+    </ul>
+  </nav>
 
-<!-- Page Header -->
-<section class="header">
-  <div class="container">
-    <div class="row">
-      <div class="five columns">
-        <img src="https://farm5.staticflickr.com/4282/35044621484_1fc2b80c12.jpg" alt="Picture of me.">
-      </div>
-      <div class="six columns">
-        <h1>Chris Daw</h1>
-        <h4>Western Washington University</h4>
-        <p>Programmer,<br>Theater Technician,<br>Hobbyist.</p>
+  <!-- Page Header -->
+  <div class="header">
+    <div class="container">
+      <div class="row">
+        <div class="five columns">
+          <img src="https://farm5.staticflickr.com/4282/35044621484_1fc2b80c12.jpg" alt="Picture of me.">
+        </div>
+        <div class="six columns">
+          <h1>Chris Daw</h1>
+          <h4>Western Washington University</h4>
+          <p>Programmer,<br>Theater Technician,<br>Hobbyist.</p>
 
-        <!-- Social Media Links -->
-        <a href="https://github.com/ChristopherDaw" title="GitHub" target="_blank"><i class="fa fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/chrisdawww/" title="LinkedIn" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-        <a href="https://www.instagram.com/chrisdawww/" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
-        <a href="https://www.flickr.com/people/51503874@N05/" title="Flickr" target="_blank"><i class="fa fa-flickr"></i></a>
+          <!-- Social Media Links -->
+          <a href="https://github.com/ChristopherDaw" title="GitHub" target="_blank"><i class="fa fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/chrisdawww/" title="LinkedIn" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+          <a href="https://www.instagram.com/chrisdawww/" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+          <a href="https://www.flickr.com/people/51503874@N05/" title="Flickr" target="_blank"><i class="fa fa-flickr"></i></a>
+        </div>
       </div>
     </div>
   </div>
-</section>
-<h1>Website under construction!</h1>
+</div>
+<!--
+<h1>Website under construction!</h1>-->
 </body>
 </html>

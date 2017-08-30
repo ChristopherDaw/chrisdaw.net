@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  height: 100%;
+  height: 100vh;
   font-size: 2rem;
   line-height: 1.6;
   font-family: "Quicksand", Arial, sans-serif;
@@ -91,6 +91,8 @@ div.about-content a{
 .header {
   width: 100%;
   padding: 60px 0;
+  /*background-image: url("https://farm5.staticflickr.com/4338/36070457494_c4a73d547e_o.jpg");
+  background-size: cover;*/
   background-color: #66A3C1;
   color: white;
 }
@@ -201,6 +203,7 @@ a:hover .fa {
 .edu, .hobbies {
   background-color: #386398;
   height: 100%;
+  overflow: hidden;
 }
 
 [class$="-contents"] {
@@ -249,17 +252,35 @@ div[class*="edu-"] h4 {
   margin-left: 0.5rem;
 }
 
-.ebird {
+.hobbies a {
   text-decoration: underline;
 }
 
 .tinkering img {
+  width: 100%;
   height: auto;
-  width: auto;
   border-radius: 2rem;
-  max-width: 85%;
+  /max-width: 100%;
   height: auto;
   width: auto\9; /*IE 8 */
+}
+
+.fluidWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* proportion value to aspect ratio 16:9 (9 / 16 = 0.5625 or 56.25%) */
+    padding-top: 2rem;
+    margin-bottom: 1rem;
+    height: 0;
+}
+
+.fluidWrapper iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.yoyo p {
+  padding-left: 2rem;
 }
 
 .hobby-contents div {
