@@ -13,15 +13,6 @@
   <link rel="icon" type="image/png" sizes="64x64" href="static/images/favicon-64.png">
   <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon-16.png">
-  <link rel="apple-touch-icon" href="static/images/favicon-57.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="static/images/favicon-114.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="static/images/favicon-72.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="static/images/favicon-144.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="static/images/favicon-60.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="static/images/favicon-120.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="static/images/favicon-76.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="static/images/favicon-152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="static/images/favicon-180.png">
   <meta name="msapplication-TileColor" content="#FFFFFF">
   <meta name="msapplication-TileImage" content="static/images/favicon-144.png">
   <meta name="msapplication-config" content="static/images/browserconfig.xml">
@@ -40,9 +31,11 @@
 <body>
 
 <!--Menu Bar -->
+<div class="wrapper">
 <nav class="menu">
   <ul>
-    <li><a href="/">Chris Daw</a></li>
+    <li class="desktop"><a href="{{ url_for('index') }}">Chris Daw</a></li>
+    <li class="mobile"><a href="{{ url_for('index') }}">Chris</a></li>
     <li class="dropdown">
       <a href="about" class="dropbutton">About</a>
       <div class="about-content">
@@ -79,6 +72,6 @@
     </div>
   </div>
 </section>
-<h1>Website under construction!</h1>
+</div>
 </body>
 </html>

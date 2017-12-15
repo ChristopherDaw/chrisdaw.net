@@ -13,15 +13,6 @@
   <link rel="icon" type="image/png" sizes="64x64" href="static/images/favicon-64.png">
   <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon-16.png">
-  <link rel="apple-touch-icon" href="static/images/favicon-57.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="static/images/favicon-114.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="static/images/favicon-72.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="static/images/favicon-144.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="static/images/favicon-60.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="static/images/favicon-120.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="static/images/favicon-76.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="static/images/favicon-152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="static/images/favicon-180.png">
   <meta name="msapplication-TileColor" content="#FFFFFF">
   <meta name="msapplication-TileImage" content="static/images/favicon-144.png">
   <meta name="msapplication-config" content="static/images/browserconfig.xml">
@@ -40,9 +31,11 @@
 <body>
 
 <!--Menu Bar -->
+<div class="wrapper">
 <nav class="menu">
   <ul>
-    <li><a href="/">Chris Daw</a></li>
+    <li class="desktop"><a href="{{ url_for('index') }}">Chris Daw</a></li>
+    <li class="mobile"><a href="{{ url_for('index') }}">Chris</a></li>
     <li class="dropdown">
       <a href="about" class="dropbutton">About</a>
       <div class="about-content">
@@ -61,24 +54,47 @@
 </nav>
 
 <!-- Page Header -->
-<section class="header">
+<section class="csheader">
   <div class="container">
     <div class="row">
 
-      <div class="six columns">
-        <h1>Chris Daw</h1>
-        <h4>Western Washington University</h4>
-        <p>Programmer,<br>Theater Technician,<br>Hobbyist.</p>
+      <div class="twelve columns csheader">
+        <h1>Computer Science</h1>
+        <h4><a href="https://github.com/ChristopherDaw" title="GitHub" target="_blank"><i class="fa fa-github"></i></a></h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum tortor ac elit consequat lobortis eu quis nulla. Sed tempus dui eu metus imperdiet, eu efficitur ex rhoncus. Proin tempus erat odio. Mauris viverra mi sit amet metus gravida maximus. Suspendisse et lorem sem. Aliquam tristique odio leo, nec eleifend neque ornare et. Nunc faucibus velit urna, ac lacinia felis hendrerit ac. Nulla id magna tristique.</p>
 
-        <!-- Social Media Links -->
-        <a href="https://github.com/ChristopherDaw" title="GitHub" target="_blank"><i class="fa fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/chrisdawww/" title="LinkedIn" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-        <a href="https://www.instagram.com/chrisdawww/" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
-        <a href="https://www.flickr.com/people/51503874@N05/" title="Flickr" target="_blank"><i class="fa fa-flickr"></i></a>
       </div>
     </div>
   </div>
 </section>
-<h1>Website under construction!</h1>
+<section class="projs">
+
+  <h1>Projects</h1>
+    <div class="row">
+      <a href="https://github.com/ChristopherDaw/fbMessageAnalyzer" title="Facebook Message Analyzer" target="_blank">
+        <div class="fill33">
+          <h3>Messenger Analyzer</h3>
+          <h4>2015</h4>
+          <p>AP Computer Science project from high school to read, parse, and analyze personal facebook messenger usage. Between then and now, Facebook has changed the way they format their data so this program is only works for data made before then.</p>
+        </div>
+      </a>
+      <a href="https://github.com/ChristopherDaw/chrisdaw.net" title="Website" target="_blank">
+        <div class="fill33">
+          <h3>This Website</h3>
+          <h4>July 2017 - Present</h4>
+          <p>A project I started both to have a portfolio website and to learn how to make a website! I use a Flask framework and wrote the html and CSS by hand.</p>
+        </div>
+      </a>
+      <a href="https://github.com/ChristopherDaw/" title="Github" target="_blank">
+        <div class="fill33">
+          <h3>More...</h3>
+          <h4>2012 - Present</h4>
+          <p>A collection of projects I have tracked with Git.  This is just a curated selection of projects I am most proud of.</p>
+        </div>
+      </a>
+    </div>
+
+</section>
+</div>
 </body>
 </html>
