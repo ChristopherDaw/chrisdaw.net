@@ -34,8 +34,8 @@
 <div class="wrapper">
   <nav class="menu">
     <ul>
-      <li class="desktop active"><a href="#">Chris Daw</a></li>
-      <li class="mobile active"><a href="#">Chris</a></li>
+      <li class="desktop"><a class="active" href="#">Chris Daw</a></li>
+      <li class="mobile"><a class="active" href="#">Chris</a></li>
       <li class="dropdown">
         <a href="about" class="dropbutton">About</a>
         <div class="about-content">
@@ -46,7 +46,7 @@
         </div></li>
       <li class="desktop"><a href="{{ url_for('cs') }}">Computer Science</a></li>
       <li class="mobile"><a href="{{ url_for('cs') }}">CS</a></li>
-      <li><a href="{{ url_for('theatre') }}">Theatre</a></li>
+      <!--<li><a href="{{ url_for('theatre') }}">Theatre</a></li>-->
       <li class="last desktop"><a href="mailto:chris@chrisdaw.net">Contact Me</a></li>
       <li class="last mobile"><a href="mailto:chris@chrisdaw.net"><i class="fa fa-envelope"></i></a></li>
     </ul>
@@ -63,6 +63,9 @@
         <h1>Chris Daw</h1>
         <h4>Western Washington University</h4>
         <p>Programmer,<br>Theater Technician,<br>Hobbyist.</p>
+        <div class="resume">
+          <a href="static/files/2017ChrisDawResume.pdf" target="_blank" class="downloadbutton">Resume!</a>
+        </div>
 
         <!-- Social Media Links -->
         <a href="https://github.com/ChristopherDaw" title="GitHub" target="_blank"><i class="fa fa-github"></i></a>

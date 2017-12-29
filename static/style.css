@@ -27,13 +27,12 @@ a {
   color: white; }
 
  .wrapper {
-   min-height: 100vh;
+
+   min-height: 100%;
    background-color: #66A3C1;
  }
 
- section {
-   background-color:
- }
+
 
 /* Menu Styling
 ––––––––––––––––––––––––457B9D–––––––––––––––––––––––––– */
@@ -126,8 +125,14 @@ div.about-content a {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .fa {
   margin-right: 2rem;
-  margin-top: 4rem;
+  margin-top: 2rem;
   font-size: 4rem; }
+
+h1 .fa{
+  margin-right: 2rem;
+  margin-top: 0;
+  font-size: 4rem;
+}
 
 a .fa {
   color: white;
@@ -187,7 +192,7 @@ a:hover .fa {
   transition: background-color 0.2s ease;
   background-color: #1D3557; }
 
-.test {
+.resume {
   margin-top: 1rem; }
 
 .summary, .work-exp {
@@ -280,32 +285,26 @@ div[class*="edu-"] h4 {
 /* CS Page Styling
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .fill33 {
+  display: table-cell;
+  vertical-align: top;
   text-align: center;
   color: white;
   width: 33.33%;
-  height: 100%;
-  float: left;
+  height: inherit;
   overflow: hidden;
-  padding-top: 3rem;
-  transition: background-color 0.3s ease;
-  background-color: rgba(0,0,0,0);
-}
-
-.fill33:hover {
-  transition: background-color 0.3s ease;
-  background-color: rgba(255,255,255,0.1);
 }
 
 .csheader {
+  padding-top: 60px;
   text-align: center;
   color: white;
 }
 
 .projs {
+  padding-top: 2rem;
   color: white;
   text-align: center;
   bottom: 0;
-  position: fixed;
   width: 100%
 }
 
@@ -321,7 +320,7 @@ div[class*="edu-"] h4 {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {
   position: relative;
-  max-width: 60%;
+  max-width: 75%;
   box-sizing: border-box; }
 
 .column,
@@ -333,6 +332,22 @@ div[class*="edu-"] h4 {
 /* Mobile phone media query styling */
 @media screen and (max-width: 800px) {
   /* For mobile phones: */
+  .header {
+    padding-top: 20px;
+  }
+
+  .csheader {
+    padding-top: 10px;
+  }
+
+  .csheader p {
+    text-align: left;
+  }
+
+  .projs p{
+    text-align: left;
+  }
+
   .fa {
     margin: 1rem;
   }
@@ -346,18 +361,15 @@ div[class*="edu-"] h4 {
     max-width: 100%;
   }
 
-  .projs > div {
-    background-color: rgba(255,255,255,0.1);
-  }
-
   .projs:first-child > div {
     padding-top: 1rem;
   }
 
   .fill33{
+    display: block;
     float: none;
     width: 80%;
-
+    padding-bottom: 2rem;
   }
 
   [class*="column"] {
@@ -410,15 +422,33 @@ div[class*="edu-"] h4 {
   div[class*="edu-"] h4 {
     text-align: center; }
 
+  .work-theatre,
+  .work-cs {
+    padding-top: 1rem;
+    border-bottom: 1px white solid; }
+
+  .work-stanford {
+    padding-top: 1rem;
+  }
+
   .snapwidget-widget {
     width: 100%; }
 
   .tinkering img {
-    max-width: 100%; } }
-/* For devices larger than 550px */
+    max-width: 100%; }
+}
+/* For devices larger than 800px */
 @media (min-width: 800px) {
   .fill33 {
-    padding-bottom: 3rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    transition: background-color 0.3s ease;
+    background-color: rgba(0,0,0,0);
+  }
+
+  .fill33:hover {
+    transition: background-color 0.3s ease;
+    background-color: rgba(255,255,255,0.1);
   }
 
   .container {

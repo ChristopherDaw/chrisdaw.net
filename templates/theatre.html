@@ -32,32 +32,33 @@
 
 <!--Menu Bar -->
 <div class="wrapper">
-<nav class="menu">
-  <ul>
-    <li class="desktop"><a href="{{ url_for('index') }}">Chris Daw</a></li>
-    <li class="mobile"><a href="{{ url_for('index') }}">Chris</a></li>
-    <li class="dropdown">
-      <a href="about" class="dropbutton">About</a>
-      <div class="about-content">
-        <a href="about">Summary</a>
-        <a href="about#edu">Education</a>
-        <a href="about#work-exp">Experience</a>
-        <a href="about#hobbies">Hobbies</a>
-        <a href="about#awards">Accomplishments</a>
-      </div></li>
-    <li class="desktop"><a href="cs">Computer Science</a></li>
-    <li class="mobile"><a href="cs">CS</a></li>
-    <li><a class="active" href="#">Theatre</a></li>
-    <li class="last desktop"><a href="mailto:chris@chrisdaw.net">Contact Me</a></li>
-    <li class="last mobile"><a href="mailto:chris@chrisdaw.net"><i class="fa fa-envelope"></i></a></li>
-  </ul>
-</nav>
+  <nav class="menu">
+    <ul>
+      <li class="desktop"><a class="active" href="#">Chris Daw</a></li>
+      <li class="mobile"><a class="active" href="#">Chris</a></li>
+      <li class="dropdown">
+        <a href="about" class="dropbutton">About</a>
+        <div class="about-content">
+          <a href="about">Summary</a>
+          <a href="about#edu">Education</a>
+          <a href="about#work-exp">Experience</a>
+          <a href="about#hobbies">Hobbies</a>
+        </div></li>
+      <li class="desktop"><a href="{{ url_for('cs') }}">Computer Science</a></li>
+      <li class="mobile"><a href="{{ url_for('cs') }}">CS</a></li>
+      <!--<li><a href="{{ url_for('theatre') }}">Theatre</a></li>-->
+      <li class="last desktop"><a href="mailto:chris@chrisdaw.net">Contact Me</a></li>
+      <li class="last mobile"><a href="mailto:chris@chrisdaw.net"><i class="fa fa-envelope"></i></a></li>
+    </ul>
+  </nav>
 
 <!-- Page Header -->
 <section class="header">
   <div class="container">
     <div class="row">
-
+      <div class="five columns">
+        <img src="https://farm5.staticflickr.com/4561/27279646489_05aba76e86_k.jpg" alt="Picture of me.">
+      </div>
       <div class="six columns">
         <h1>Chris Daw</h1>
         <h4>Western Washington University</h4>
