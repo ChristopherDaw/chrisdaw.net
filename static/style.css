@@ -195,7 +195,7 @@ a:hover .fa {
 .resume {
   margin-top: 1rem; }
 
-.summary, .work-exp {
+.summary, .edu {
   background-color: #66A3C1;
   height: 100%;
   overflow: hidden; }
@@ -204,7 +204,7 @@ a:hover .fa {
   margin-bottom: 1rem; }
 
 /* Education Section Styling */
-.edu, .hobbies {
+.work-exp, .hobbies {
   background-color: #386398;
   height: 100%;
   overflow: hidden; }
